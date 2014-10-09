@@ -4,11 +4,11 @@ module.exports = function(grunt) {
     jasmine: {
       pivotal: {
         src: 'src/**/*.js',
-                      options: {
-                      specs: 'spec/*Spec.js',
-                      helpers: 'spec/*Helper.js'
-               }
-               }
-               }
-               });
+        options: {
+          specs: 'spec/*Spec.js',
+          helpers: 'spec/*Helper.js'
+        }
+      }
+    }
+  });
 };
