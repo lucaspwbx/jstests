@@ -1,14 +1,20 @@
 module.exports = function(grunt) {
-  grunt.loadNpmTasks('grunt-contrib-jasmine');
+  'use strict';
+
   grunt.initConfig({
     jasmine: {
-      pivotal: {
-        src: 'src/**/*.js',
-        options: {
-          specs: 'spec/*Spec.js',
-          helpers: 'spec/*Helper.js'
+      src: 'src/**/*.js',
+      options: {
+        specs: 'spec/**/*.js',
+        template: require('grunt-template-jasmine-requirejs'),
+        templateOptions: {
+          requireConfig: {
+            baseUrl: ''
+          }
         }
       }
     }
   });
+
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
 };
